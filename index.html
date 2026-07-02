@@ -6,19 +6,9 @@
 <title>Ekwador — planer wyprawy v33</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0E1613; --panel:#131E1A; --card:#17241F; --card2:#1B2C26;
-  --ink:#ECE7DC; --dim:#93A099; --faint:#5E6E67;
-  --line:rgba(236,231,220,.11); --line2:rgba(236,231,220,.06);
-  --sierra:#E7A83E; --coast:#37BCAC; --amazon:#5FB25C; --culture:#8AA0E6; --trans:#D7B99A; --usa:#A6D3FF; --islands:#E9673F;
-  --danger:#E1524B; --warn:#F0BE5E; --ok:#5FB25C;
-  --disp:'Oswald',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
-}
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style id="app-styles">
 *{box-sizing:border-box} html,body{margin:0} html{scroll-behavior:smooth}
-body{background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.5; -webkit-font-smoothing:antialiased;
-  background-image:radial-gradient(1200px 650px at 80% -10%,rgba(55,188,172,.07),transparent 60%),radial-gradient(900px 520px at -10% 24%,rgba(231,168,62,.055),transparent 55%)}
 .wrap{max-width:1320px;margin:0 auto;padding:0 20px 100px}
 header{padding:32px 0 22px;border-bottom:1px solid var(--line)}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--coast)}
@@ -61,9 +51,6 @@ h1 .b{color:var(--sierra)} .sub{color:var(--dim);max-width:78ch;font-size:15px}
 .att-thumb.placeholder{background:linear-gradient(135deg,rgba(55,188,172,.18),rgba(231,168,62,.14))}.detail-link{font-family:var(--mono);font-size:10px;color:var(--coast);margin-top:8px;letter-spacing:.08em;text-transform:uppercase}.att:hover .detail-link{text-decoration:underline}.subitem .info-dot{width:18px;height:18px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:var(--dim)}.subitem:hover .info-dot{color:var(--coast);border-color:var(--coast)}
 .detail-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(3,8,7,.78);backdrop-filter:blur(8px)}.detail-modal.show{display:flex}.detail-box{width:min(1040px,100%);max-height:92vh;overflow:auto;background:var(--panel);border:1px solid rgba(236,231,220,.16);border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.45)}.detail-hero{min-height:280px;background-size:cover;background-position:center;position:relative;border-radius:18px 18px 0 0;display:flex;align-items:flex-end}.detail-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,19,.05),rgba(14,22,19,.88));border-radius:18px 18px 0 0}.detail-close{position:absolute;top:14px;right:14px;z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid rgba(236,231,220,.25);background:rgba(14,22,19,.72);color:var(--ink);font-size:24px;line-height:1;cursor:pointer}.detail-title{position:relative;z-index:1;padding:26px}.detail-title h2{font-family:var(--disp);font-size:clamp(28px,4vw,44px);line-height:.96;margin:0;text-transform:uppercase}.detail-title p{max-width:72ch;color:var(--ink);margin:10px 0 0;font-size:15px}.detail-body{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;padding:18px 22px 22px}.detail-card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:15px}.detail-card h3{font-family:var(--disp);font-size:18px;text-transform:uppercase;margin:0 0 10px;letter-spacing:.03em}.detail-card ul{margin:0;padding-left:18px;color:var(--dim);font-size:13.5px}.detail-card li{margin:6px 0}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.kv{border:1px solid var(--line2);border-radius:10px;padding:10px;background:rgba(236,231,220,.025)}.kv b{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--faint);margin-bottom:4px}.kv span{font-size:13px;color:var(--ink)}.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.detail-actions button{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:10px 13px;cursor:pointer}.detail-primary{border:1px solid var(--coast);background:rgba(55,188,172,.12);color:var(--coast)}.detail-primary:disabled{opacity:.45;cursor:not-allowed}.detail-secondary{border:1px solid var(--line);background:transparent;color:var(--dim)}.detail-warning{color:#F0BE5E;font-family:var(--mono);font-size:11px;margin-top:10px;display:none}.detail-warning.show{display:block}@media(max-width:760px){.detail-body{grid-template-columns:1fr}.detail-hero{min-height:220px}.att-thumb{width:72px;height:58px;flex-basis:72px}.detail-grid{grid-template-columns:1fr}}
 
-</style>
-
-<style id="travel-theme-overrides">
 :root{
   --bg:#f7f0e3;
   --panel:#fff9ef;
@@ -294,10 +281,7 @@ header h1::after{
 @media (max-width:980px){
   body{background:linear-gradient(180deg,#fbf5ea 0%, #f3e7d5 100%)}
 }
-</style>
 
-
-<style id="travel-theme-v6-overrides">
 body{font-size:16px}
 .wrap{max-width:1520px;padding-left:28px;padding-right:28px}
 .grid{grid-template-columns:minmax(460px,48fr) minmax(0,52fr);gap:32px}
@@ -340,10 +324,7 @@ h1{font-size:clamp(42px,5.8vw,72px)}
 .transfer-step .transfer-options span{font-family:var(--mono);font-size:10.5px;color:#6c5a47;background:rgba(255,255,255,.62);border:1px solid rgba(80,59,38,.12);border-radius:999px;padding:4px 8px}
 @media(max-width:980px){.wrap{padding-left:16px;padding-right:16px}.grid{grid-template-columns:1fr}.mapcard svg{min-height:auto}.day,.transfer-step{grid-template-columns:64px 1fr}}
 @media(min-width:1400px){.mapcard svg{min-height:500px}.grid{grid-template-columns:minmax(540px,45fr) minmax(0,55fr)}}
-</style>
 
-
-<style id="transport-v7-overrides">
 .route-dyn-wrap{margin-top:18px;padding-top:4px}
 .route-seg{border:1px solid rgba(33,50,45,.12);border-radius:16px;background:rgba(255,255,255,.55);padding:14px;margin:12px 0}
 .route-seg-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px}
@@ -369,10 +350,7 @@ h1{font-size:clamp(42px,5.8vw,72px)}
 .mk-label{font-size:12px;font-weight:800;paint-order:stroke;stroke:rgba(255,250,240,.94);stroke-width:4px;stroke-linejoin:round}
 .att-thumb.placeholder,.detail-hero{background-size:cover!important}
 @media(max-width:860px){.route-options-grid{grid-template-columns:1fr}.route-seg-head{flex-direction:column}.route-seg-cost{text-align:left}}
-</style>
 
-
-<style id="planner-columns-v8">
 .wrap{max-width:none;padding:0 18px 18px}
 header{max-width:none;margin:0;padding:24px 12px 18px}
 header h1{font-size:clamp(34px,4vw,58px)}
@@ -467,10 +445,7 @@ header .sub{max-width:960px}
   .col-head{position:static;margin-top:18px}
   .price-block{text-align:left}
 }
-</style>
 
-
-<style id="v9-clean-transport-collapsible">
 #presetsSec{display:none!important}
 .cat-group{
   border:1px solid rgba(33,50,45,.10);
@@ -506,10 +481,7 @@ header .sub{max-width:960px}
 .col-transport .section-card{
   min-height:220px;
 }
-</style>
 
-
-<style id="v11-summary-settings">
 .hidden-metrics{display:none!important}
 .settings-card{padding:16px 18px}
 .settings-card .controls{margin-top:8px;padding-top:10px;border-top:1px dashed rgba(33,50,45,.10)}
@@ -521,17 +493,11 @@ header .sub{max-width:960px}
 .col-summary #alertsSec{margin-top:18px}
 .col-summary #timelineSec .s-hint{max-width:210px}
 @media(max-width:980px){.settings-card .controls{gap:10px}}
-</style>
 
-
-<style id="v12-order-in-transport">
 .col-transport #orderSec{margin-top:0;margin-bottom:18px}
 .col-transport #orderSec .section-card{border:2px solid rgba(185,124,76,.15)}
 .col-summary #orderSec{display:none!important}
-</style>
 
-
-<style id="v13-layover-ecuador-days">
 .ec-budget{margin-bottom:16px;padding:15px 16px}
 .ec-budget-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
 .ec-days{font-family:var(--disp);font-weight:800;font-size:34px;line-height:1;color:#17312b;margin-top:3px}
@@ -545,10 +511,7 @@ header .sub{max-width:960px}
 .cat-note{font-size:12.5px;color:var(--dim);line-height:1.45;margin:2px 0 10px}
 .mini-head{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:14px 2px 8px}
 .layover-card .att-tp::before{content:"✈ ";color:var(--usa)}
-</style>
 
-
-<style id="v14-price-cleanup">
 .use-top{border:2px solid rgba(30,168,154,.22);border-radius:16px;background:rgba(30,168,154,.08);padding:14px 15px;margin-bottom:12px}
 .use-top .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--coast)}
 .use-top .v{font-family:var(--disp);font-weight:800;font-size:34px;line-height:1;margin-top:4px;color:#17312b}
@@ -556,28 +519,20 @@ header .sub{max-width:960px}
 .use-bar{height:9px;border-radius:999px;background:rgba(33,50,45,.10);overflow:hidden;margin-top:10px}
 .use-bar div{height:100%;border-radius:999px}
 .price-footnote{font-size:11.5px;color:var(--dim);line-height:1.45;margin-top:10px;padding:10px 12px;border:1px dashed rgba(33,50,45,.14);border-radius:12px;background:rgba(255,255,255,.42)}
-</style>
 
-<style id="v15-time-cost-dedupe">
 .day-time{font-family:var(--mono);font-size:10.5px;color:var(--coast);margin-top:5px;line-height:1.25}
 .transfer-time{font-family:var(--mono);font-size:11px;color:#7a6a52;margin-top:6px}
 .brow.credit .n{color:var(--ok)}
 .brow.credit .v{color:var(--ok)}
 .price-footnote b{color:var(--ink)}
-</style>
 
-
-<style id="v16-layover-breakdown">
 .layover-detail{border-color:rgba(75,120,168,.18)}
 .layover-detail .banos-h{cursor:default}
 .layover-detail .banos-sub{padding-top:8px}
 .layover-sub{grid-template-columns:22px 1fr auto;align-items:start}
 .layover-sub .subnote{font-size:10.5px;color:var(--faint);margin-top:2px;line-height:1.35}
 .layover-sub.sel{background:rgba(75,120,168,.08)}
-</style>
 
-
-<style id="v17-timeline-fullscreen">
 #timelineSec{
   transition:transform .28s ease, opacity .28s ease, box-shadow .28s ease, border-color .28s ease;
 }
@@ -726,10 +681,7 @@ body.timeline-open::before{
     margin:8px 0 0;
   }
 }
-</style>
 
-
-<style id="v18-fixes-and-timeline-columns">
 .houston-option.not-sel{opacity:.72}
 .houston-option.not-sel .banos-sub{padding:8px 12px 12px}
 .houston-pick-hint{font-size:12px;color:var(--dim);border:1px dashed rgba(33,50,45,.12);border-radius:10px;padding:9px 10px;background:rgba(255,255,255,.45)}
@@ -788,10 +740,7 @@ body.timeline-open #timelineSec.timeline-expanded .timeline{
 @media(max-width:760px){
   .timeline-day-col{flex-basis:86vw}
 }
-</style>
 
-
-<style id="v19-hour-by-hour">
 .hour-agenda{
   margin-top:12px;
   border:1px solid rgba(33,50,45,.12);
@@ -844,22 +793,14 @@ body.timeline-open #timelineSec.timeline-expanded .timeline-day-col .hour-agenda
 @media(max-width:760px){
   .hour-row{grid-template-columns:74px 1fr}
 }
-</style>
 
-
-<style id="v20-flight-agenda-fix">
 .hour-note b{color:var(--ink)}
 .timeline-day-col .hour-row:first-of-type .hour-act{color:#17312b}
-</style>
 
-
-<style id="v21-weekday-flight-equinox">
 .day-date,.col-day-date{text-transform:none}
 .hour-row .hour-act{line-height:1.25}
 .hour-time{font-feature-settings:"tnum"}
-</style>
 
-<style id="v24-compact-days">
 .compact-box{margin-bottom:14px;border:1px solid rgba(33,50,45,.10);border-radius:16px;background:rgba(255,255,255,.55);padding:12px}
 .compact-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .compact-title{font-weight:900;color:#21322d}
@@ -872,10 +813,7 @@ body.timeline-open #timelineSec.timeline-expanded .timeline-day-col .hour-agenda
 .load-tight{background:rgba(185,124,76,.14);color:var(--sierra)}
 .load-warn{background:rgba(198,77,67,.14);color:var(--danger)}
 .day-desc br{display:block;margin:4px 0}
-</style>
 
-
-<style id="v25-audit-scheduler">
 .timeline-day-col .day-title:has(+ .day-desc){ }
 .day.phase-ecuador .day-title{line-height:1.2}
 </style>
@@ -1116,46 +1054,6 @@ const banosItems = [
 ];
 
 
-function generatedImg(q){
-  // Offline SVG fallback zamiast source.unsplash.com — działa lokalnie i nie zostawia pustych zdjęć.
-  const raw = String(q||'Ecuador adventure');
-  const lower = raw.toLowerCase();
-  let type='travel', title=raw, a='#1ea89a', b='#d9822b';
-
-  if(lower.includes('surf')||lower.includes('mont')||lower.includes('ayampe')||lower.includes('olon')||lower.includes('beach')){type='surf';title='Surf i wybrzeże';a='#1ea89a';b='#f2a24a'}
-  else if(lower.includes('quilotoa')||lower.includes('crater')){type='lake';title='Quilotoa';a='#22a8b8';b='#d9822b'}
-  else if(lower.includes('altar')||lower.includes('laguna amarilla')){type='altar';title='El Altar';a='#55745f';b='#e5b84b'}
-  else if(lower.includes('cotopaxi')){type='volcano';title='Cotopaxi';a='#d9822b';b='#1ea89a'}
-  else if(lower.includes('chimborazo')||lower.includes('rucu')||lower.includes('pichincha')){type='mountain';title=lower.includes('chimborazo')?'Chimborazo':'Rucu Pichincha';a='#7e8f93';b='#d9822b'}
-  else if(lower.includes('banos')||lower.includes('baños')||lower.includes('waterfall')||lower.includes('canyon')||lower.includes('thermal')){type='waterfall';title='Baños';a='#2f9d79';b='#24a7b4'}
-  else if(lower.includes('rafting')||lower.includes('jondachi')||lower.includes('tena')){type='river';title='Jondachi / Tena';a='#2b88a3';b='#5d9a49'}
-  else if(lower.includes('quito')){type='city';title='Quito';a='#5778d4';b='#d9822b'}
-  else if(lower.includes('guayaquil')){type='citycoast';title='Guayaquil';a='#1ea89a';b='#5778d4'}
-  else if(lower.includes('isla')||lower.includes('plata')){type='island';title='Isla de la Plata';a='#1ea89a';b='#ef6f42'}
-
-  const label = title.replace(/&/g,'and').replace(/[<>]/g,'').slice(0,34);
-  const common = `
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff3d8"/><stop offset="48%" stop-color="${a}" stop-opacity=".58"/><stop offset="100%" stop-color="#18342f"/></linearGradient>
-    <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${b}" stop-opacity=".95"/><stop offset="100%" stop-color="#f8d9a6" stop-opacity=".12"/></linearGradient>
-    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .07"/></feComponentTransfer></filter>
-  </defs>
-  <rect width="1200" height="800" fill="url(#sky)"/><rect width="1200" height="800" fill="url(#warm)" opacity=".33"/><rect width="1200" height="800" filter="url(#grain)" opacity=".55"/>`;
-
-  let scene='';
-  if(type==='surf') scene=`<circle cx="930" cy="185" r="82" fill="#ffd27a" opacity=".9"/><path d="M0 520 C180 470 310 560 480 510 C660 455 780 555 960 500 C1080 465 1160 500 1200 480 L1200 800 L0 800 Z" fill="#124f58" opacity=".72"/><path d="M0 620 C210 575 360 660 600 615 C830 575 950 670 1200 610 L1200 800 L0 800 Z" fill="#fff4e1" opacity=".48"/><path d="M420 610 l130 -58 c25 -11 46 25 22 42 l-118 82 c-32 22 -65 -49 -34 -66z" fill="#f9f2dd" opacity=".9"/>`;
-  else if(type==='lake') scene=`<path d="M0 560 C170 390 270 330 410 360 C555 390 665 305 800 330 C960 365 1060 450 1200 360 L1200 800 L0 800 Z" fill="#5c4d38" opacity=".52"/><ellipse cx="650" cy="545" rx="380" ry="135" fill="#20a8b8" opacity=".78"/><ellipse cx="650" cy="545" rx="300" ry="86" fill="#5ad5d1" opacity=".52"/>`;
-  else if(type==='altar') scene=`<path d="M0 535 L110 390 L205 455 L310 300 L390 420 L505 245 L640 440 L780 255 L900 405 L1035 330 L1200 480 L1200 800 L0 800 Z" fill="#273a3a" opacity=".82"/><path d="M310 300 L390 420 L505 245 L640 440 L780 255 L900 405 L1035 330 L1200 480 L1200 560 L0 560 L0 535 L110 390 L205 455 Z" fill="#f1f3ea" opacity=".28"/><ellipse cx="620" cy="620" rx="335" ry="95" fill="#8ccfbc" opacity=".7"/>`;
-  else if(type==='volcano') scene=`<path d="M0 650 L510 205 L650 650 Z" fill="#5c4b34" opacity=".82"/><path d="M510 205 L650 650 L1200 650 Z" fill="#2f443f" opacity=".72"/><path d="M510 205 L455 325 L560 300 L610 370 Z" fill="#fff8ee" opacity=".86"/><path d="M0 650 C220 610 350 700 540 650 C760 590 950 710 1200 640 L1200 800 L0 800 Z" fill="#19352f" opacity=".45"/>`;
-  else if(type==='waterfall') scene=`<path d="M0 800 L0 430 C170 310 280 400 380 310 C510 195 640 350 770 220 C920 65 1030 250 1200 150 L1200 800 Z" fill="#1b3a31" opacity=".72"/><path d="M650 160 C610 280 675 365 615 515 C590 580 600 650 565 800 L720 800 C700 690 765 600 735 510 C690 380 745 260 710 165 Z" fill="#eaf8ef" opacity=".78"/><rect x="0" y="640" width="1200" height="160" fill="#184640" opacity=".55"/>`;
-  else if(type==='river') scene=`<path d="M0 520 C210 410 310 540 480 450 C690 335 790 520 1200 360 L1200 800 L0 800 Z" fill="#1f583f" opacity=".65"/><path d="M0 625 C220 515 370 680 600 560 C780 470 945 620 1200 515 L1200 800 L0 800 Z" fill="#1f80a0" opacity=".78"/><path d="M340 590 l90 -35 l95 42 l-95 44 z" fill="#ffb347" opacity=".95"/>`;
-  else if(type==='city'||type==='citycoast') scene=`<circle cx="890" cy="190" r="80" fill="#ffcf75" opacity=".82"/><path d="M0 600 L95 535 L160 585 L245 490 L315 560 L420 455 L515 585 L610 500 L700 570 L800 445 L910 585 L1030 500 L1200 605 L1200 800 L0 800 Z" fill="#233b39" opacity=".72"/><rect x="95" y="480" width="70" height="175" fill="#fff3d5" opacity=".75"/><rect x="215" y="430" width="62" height="225" fill="#fff3d5" opacity=".55"/><rect x="930" y="455" width="92" height="200" fill="#fff3d5" opacity=".62"/>`;
-  else if(type==='island') scene=`<circle cx="920" cy="170" r="80" fill="#ffd27a" opacity=".86"/><path d="M0 590 C260 540 340 670 535 610 C735 545 875 675 1200 585 L1200 800 L0 800 Z" fill="#0e5961" opacity=".7"/><path d="M360 555 C445 500 555 510 645 565 C560 590 450 590 360 555 Z" fill="#203b2e" opacity=".8"/><circle cx="600" cy="515" r="22" fill="#fff7e8"/><path d="M585 520 q-60 -20 -95 20" stroke="#fff7e8" stroke-width="16" fill="none" stroke-linecap="round"/>`;
-  else scene=`<path d="M0 610 L150 445 L240 560 L370 385 L515 610 L665 330 L835 600 L980 455 L1200 610 L1200 800 L0 800 Z" fill="#203b35" opacity=".72"/><circle cx="870" cy="170" r="82" fill="#ffce73" opacity=".82"/>`;
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">${common}${scene}<rect x="0" y="0" width="1200" height="800" fill="url(#sky)" opacity=".08"/><text x="54" y="705" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="800" fill="#fff8ec" style="letter-spacing:.02em">${label}</text><text x="58" y="748" font-family="monospace" font-size="22" fill="#fff8ec" opacity=".78">Ekwador · trip planner</text></svg>`;
-  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
-}
 
 // Deterministic real photo set. The app loads Wikimedia photos through
 // wsrv.nl so cards do not depend on generated SVG placeholders or random image APIs.
